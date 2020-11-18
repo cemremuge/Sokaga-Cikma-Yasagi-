@@ -1,0 +1,26 @@
+age = int(input("Yaşını alabilir miyim dostum? "))
+day = int(input("Pazartesiden başlayıp şöyle bir say bakalım haftanın kaçıncı günündeyiz."))
+hour = float(input("Zahmet olacak ama bir de saati de alabilirsem...(xx.yy formatında, 24 saat üzerinden)"))
+job = input("Çok oldum farkındayım ama bir de çalışıyor muyuz onu öğrenebilir miyim? (y/n):")
+
+if (day>5): #hafta sonu
+    if (hour >=10):
+        if(hour < 20):
+            if (age > 20 and age <65):
+                print("Valla helal olsun, çıkabilirsin dışarı. Aman diyim maskeni de tak unutma.")
+            elif (age>65 and (hour>10 and hour<13)):
+                print("Teyzecim/Amcacım şans yüzünüze güldü! Hadi biraz gez dolaşın da gelin.")
+            elif (age<20 and (hour>13 and hour<16)):
+                print("Genç dostum hadi yine iyisin biraz hava almaya çıkabilirsin. Çok geç kalma, maskeni de unutma aman.")
+    print("Yok sen çıkamazsın otur oturduğun yerde.")
+
+else: #hafta içi
+    if ((age >20 and age<65) or job =="y"):
+        print("Amaan ne yaparsanız yapın, gidin gezin. Zaten çalışıyorsanız yaş kısıtlaması falan yapmıyoruz.")
+    elif (age<20 and (hour<13 or hour>16)):
+        print("Ah be! Kıl payı kaçırdın dostum yarını bekle.")
+    elif (age>65 and (hour<10 or hour>13)):
+        print("Teyzecim/Amcacım malesef saati kaçırdınız. Masterchef oluyor günün her saatinde ona bakın biraz.")
+    
+        
+    
